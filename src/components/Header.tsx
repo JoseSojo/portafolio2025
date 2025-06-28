@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
+import { Link } from '@tanstack/react-router';
 
-const Header = () => {
+const Header = ({ cotizar }:{cotizar?: boolean}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -96,13 +97,14 @@ const Header = () => {
               josesojo2828@gmail.com
             </motion.span>
             <ThemeToggle />
-            <motion.button 
+            <Link
+              to={cotizar ? "/" : "/cotizar"}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              // whileHover={{ scale: 1.05 }}
+              // whileTap={{ scale: 0.95 }}
             >
               Cotizar Proyecto
-            </motion.button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}

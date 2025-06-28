@@ -6,6 +6,7 @@ import {
 } from '@tanstack/react-router'
 import App from './PorfolioApp'
 import IndexApp from './App'
+import ContizationApp from './ContizationApp'
 
 // 1. Crear una ruta raíz (puede ser un layout)
 const rootRoute = createRootRoute({
@@ -19,16 +20,16 @@ const indexRoute = createRoute({
   component: App,
 })
 
-// const aboutRoute = createRoute({
-//   getParentRoute: () => rootRoute,
-//   path: '/cotizar',
-//   component: ,
-// })
+const cotizarRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/cotizar',
+  component: ContizationApp,
+})
 
 // 4. Construir el árbol de rutas
 const routeTree = rootRoute.addChildren([
   indexRoute,
-//   aboutRoute,
+  cotizarRoute,
 ])
 
 // 5. Crear el enrutador
