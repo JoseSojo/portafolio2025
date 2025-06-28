@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Copy, Check, Code, Cloud } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from '@tanstack/react-router';
 
 const CodeDemo = () => {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -228,13 +229,14 @@ app.post('/api/products', authenticate, authorize('admin'), async (req, res) => 
                 Este es solo una muestra de lo que podemos crear juntos. Cada proyecto es único y personalizado.
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <motion.button
+                <Link
+                  to='/cotizar'
                   className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  // whileHover={{ scale: 1.05 }}
+                  // whileTap={{ scale: 0.95 }}
                 >
-                  Iniciar mi Proyecto
-                </motion.button>
+                  ve a cotizar
+                </Link>
               </div>
             </div>
           </div>

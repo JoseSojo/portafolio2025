@@ -1,7 +1,7 @@
 import { DATA } from "../utils/data";
 
-const botToken = '8088845145:AAG39fZsepjFIoNuNr0_nfXBDWnjto8rXHk';
-const chatId = '-4712483141';
+const botToken = process.env.TELEGRAM_BOT_TOKEN;
+const chatId = process.env.TELEGRAM_CHAT_ID;
 
 export function formatFormDataForTelegram(formData: typeof DATA) {
     return `

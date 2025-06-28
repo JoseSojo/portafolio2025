@@ -2,6 +2,7 @@ import { ArrowRight, Code, Server, BarChart2, Smartphone, Mail } from 'lucide-re
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import HourglassIcon from './HourglassIcon';
+import { Link } from '@tanstack/react-router';
 
 const Hero = () => {
   const [ref, inView] = useInView({
@@ -152,14 +153,15 @@ const Hero = () => {
             className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16"
             variants={itemVariants}
           >
-            <motion.button
+            <Link 
+              to="/cotizar"
               className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl transition-all duration-300 flex items-center group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              // whileHover={{ scale: 1.05 }}
+              // whileTap={{ scale: 0.95 }}
             >
-              Iniciar Proyecto
+              Cotizar
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </Link>
           </motion.div>
 
           {/* Services Grid */}

@@ -41,12 +41,12 @@ const Header = ({ cotizar }:{cotizar?: boolean}) => {
             className="flex-shrink-0"
             whileHover={{ scale: 1.05 }}
           >
-            <a href="#" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-3">
               {/* <HourglassIcon size={32} className="hover:scale-110 transition-transform duration-300" /> */}
               <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Jose Sojo
               </span>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -103,7 +103,11 @@ const Header = ({ cotizar }:{cotizar?: boolean}) => {
               // whileHover={{ scale: 1.05 }}
               // whileTap={{ scale: 0.95 }}
             >
-              Cotizar Proyecto
+              {
+                cotizar
+                  ? "Inicio"
+                  : "Iniciar Cotización"
+              }
             </Link>
           </div>
 

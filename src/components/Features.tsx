@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from '@tanstack/react-router';
 
 const Features = () => {
   const [ref, inView] = useInView({
@@ -192,20 +193,14 @@ const Features = () => {
                 Desde el concepto hasta el lanzamiento.
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <motion.button 
+                <Link 
+                  to="/cotizar"
                   className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  // whileHover={{ scale: 1.05 }}
+                  // whileTap={{ scale: 0.95 }}
                 >
                   Solicitar Cotización
-                </motion.button>
-                <motion.button 
-                  className="text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold border border-gray-300 dark:border-gray-600 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all duration-300 backdrop-blur-sm"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Contactar
-                </motion.button>
+                </Link>
               </div>
             </div>
           </div>

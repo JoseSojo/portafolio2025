@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { Zap, Shield, Code, ArrowRight, FileArchive } from 'lucide-react';
+import { Zap, Shield, Code, FileArchive } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
 
@@ -87,27 +87,6 @@ export const HeroSection: React.FC = () => {
                         Nuestro proceso transparente te garantiza el mejor valor para tu inversión.
                     </motion.p>
 
-                    {/* CTA Buttons */}
-                    <motion.div
-                        className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16"
-                    >
-                        <motion.button
-                            className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl transition-all duration-300 flex items-center group"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            Ver Guía de Cotización
-                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </motion.button>
-                        <motion.button
-                            className="bg-gradient-to-r from-orange-600 via-purple-600 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl transition-all duration-300 flex items-center group"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            Contactar
-                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </motion.button>
-                    </motion.div>
                 </div>
             </motion.div>
 
